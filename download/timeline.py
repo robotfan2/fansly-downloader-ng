@@ -91,7 +91,7 @@ def download_timeline(config: FanslyConfig, state: DownloadState) -> None:
                 # get next timeline_cursor
                 try:
                     # Slow down to avoid the Fansly rate-limit which was introduced in late August 2023
-                    sleep(random.uniform(2, 4))
+                    sleep(random.uniform(10, 60))
 
                     timeline_cursor = timeline['posts'][-1]['id']
 
