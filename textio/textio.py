@@ -97,8 +97,8 @@ def input_enter_continue(interactive: bool) -> None:
     if interactive:
         input('\nPress <ENTER> to attempt to continue ...')
     else:
-        print('\nContinuing in 15 seconds ...')
-        sleep(15)
+        print('\nContinuing in 60 seconds ...')
+        sleep(60)
 
 
 # clear the terminal based on the operating system
