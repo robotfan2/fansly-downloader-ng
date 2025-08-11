@@ -56,7 +56,7 @@ def download_media_infos(
             )
 
         # Slow down a bit to be sure
-        sleep(random.uniform(0.4, 0.75))
+        sleep(random.uniform(2,8))
 
     return media_infos
 
