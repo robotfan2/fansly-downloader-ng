@@ -209,8 +209,11 @@ def download_media(config: FanslyConfig, state: DownloadState, accessible_media:
             state.pic_count += 1 if 'image' in media_item.mimetype else 0
             state.vid_count += 1 if 'video' in media_item.mimetype else 0
 
+            # if not a dupe, reset the dupe count
+            state.duplicate_count = 0
+
         except M3U8Error as ex:
             print_warning(f'Skipping invalid item: {ex}')
 
         # Slow down a bit to be sure
-        sleep(random.uniform(0.4, 0.75))
+        sleep(random.uniform(1, 10))
